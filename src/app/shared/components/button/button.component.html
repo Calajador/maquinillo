@@ -1,0 +1,92 @@
+<ng-container [ngSwitch]="displayType">
+  <ng-container *ngSwitchCase="typeButtonEnum.BASIC">
+    <button [type]="btnType" mat-button [color]="color" [disabled]="disabled">
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.RAISED">
+    <button
+      [type]="btnType"
+      mat-raised-button
+      [color]="color"
+      [disabled]="disabled"
+    >
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.STROKED">
+    <button
+      [type]="btnType"
+      mat-stroked-button
+      [color]="color"
+      [disabled]="disabled"
+      class="stroked-btn"
+    >
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.FLAT">
+    <button
+      [type]="btnType"
+      mat-flat-button
+      [color]="color"
+      [disabled]="disabled"
+    >
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.ICON">
+    <button
+      [type]="btnType"
+      mat-icon-button
+      [color]="color"
+      [disabled]="disabled"
+    >
+      <mat-icon *ngIf="icon" [ngClass]="{ iconoBlanco: icon }">{{
+        icon
+      }}</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.FAB">
+    <button [type]="btnType" mat-fab [color]="color" [disabled]="disabled">
+      <mat-icon *ngIf="icon" [ngClass]="{ iconoBlanco: icon }">{{
+        icon
+      }}</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeButtonEnum.MINI_FAB">
+    <button [type]="btnType" mat-mini-fab [color]="color" [disabled]="disabled">
+      <mat-icon *ngIf="icon" [ngClass]="{ iconoBlanco: icon }">{{
+        icon
+      }}</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <button
+      [type]="btnType"
+      mat-raised-button
+      [color]="color"
+      [disabled]="disabled"
+    >
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </button>
+  </ng-container>
+</ng-container>
+
+<ng-template #contentTemplate>
+  <div>
+    <mat-icon
+      *ngIf="leftIcon"
+      [ngClass]="{ iconoBlanco: leftIcon }"
+      class="mr-2"
+      >{{ leftIcon }}</mat-icon
+    >
+    <span class="text text-truncate">{{ text | translate }}</span>
+    <mat-icon
+      *ngIf="rightIcon"
+      [ngClass]="{ iconoBlanco: rightIcon }"
+      class="ml-2"
+      >{{ rightIcon }}</mat-icon
+    >
+  </div>
+</ng-template>

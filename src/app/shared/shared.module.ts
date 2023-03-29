@@ -6,12 +6,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { MaterialModule } from './material.module';
+import { ButtonComponent } from './components/button/button.component';
+import { TableComponent } from './components/table/table.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SidenavItemComponent } from './components/sidenav/sidenav-item/sidenav-item.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 @NgModule({
-  declarations: [],
+  declarations: [
+    ButtonComponent,
+    TableComponent,
+    SidenavComponent,
+    SidenavItemComponent,
+    ToolbarComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -27,7 +38,17 @@ export function HttpLoaderFactory(http: HttpClient) {
       isolate: false,
     }),
   ],
-  exports: [MaterialModule, TranslateModule, FormsModule, ReactiveFormsModule],
+  exports: [
+    MaterialModule,
+    TranslateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ButtonComponent,
+    TableComponent,
+    SidenavComponent,
+    SidenavComponent,
+    ToolbarComponent,
+  ],
 })
 export class SharedModule {
   static forRoot() {

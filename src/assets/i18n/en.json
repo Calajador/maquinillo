@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "home": "Blog Project with angular",
+    "spanish": "Spanish",
+    "english": "English"
+  },
+
+  "sidebar": {
+    "dashboard": {
+      "menu_title": "Dashboard"
+    },
+    "users": {
+      "menu_title": "Users"
+    }
+  },
+
+  "dashboard": {
+    "title": "Dashboard"
+  },
+
+  "grid": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "detail": "Detail",
+    "select_one": "Select One",
+    "no_records": "No records found",
+    "doc": "doc"
+  }
+}

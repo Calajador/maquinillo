@@ -1,0 +1,30 @@
+{
+  "navbar": {
+    "home": "Proyecto blog con angular",
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+
+  "sidebar": {
+    "dashboard": {
+      "menu_title": "Panel"
+    },
+    "users": {
+      "menu_title": "Usuarios"
+    }
+  },
+
+  "dashboard": {
+    "title": "Panel de Administracion"
+  },
+
+  "grid": {
+    "edit": "Editar",
+    "delete": "Borrar",
+    "detail": "Detalle",
+    "select_one": "Seleccione Uno",
+    "no_records": "No hay registros",
+    "doc": "doc",
+    "label_pages": "Items por página"
+  }
+}
